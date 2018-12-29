@@ -22,11 +22,14 @@ public class Algo {
 	}
 	public static int[] bx = {0,1, 0,-1,1,-1, 1,-1};
 	public static int[] by = {1,0,-1, 0,1,-1,-1, 1};
+	
+
 	public static void startAlgorthim() {
 		sortcoord sortc= getSort();
 		int x = sx,y = sy;
 		coord newcoord;
 		ArrayList<coord> coords =  new ArrayList<coord>();
+		System.out.println("sx "+sx+" sy "+sy+" ex "+ex+" ey "+ey);
 		while(x!=ex || y!=ey) {
 			coords.clear();
 			g.Grid[x][y]= 2;
@@ -35,7 +38,7 @@ public class Algo {
 				if(g.Grid[x + bx[i]][y + by[i]] == 0) {
 					coords.add(new coord(x + bx[i],y + by[i]));
 					g.Grid[x + bx[i]][y + by[i]] = 3;
-					g.drawGrid();
+					//g.drawGrid();
 				}
 			}
 			}
@@ -46,7 +49,7 @@ public class Algo {
 			x = newcoord.x;
 			y = newcoord.y;
 			g.drawGrid();
-			sleep(100);
+			sleep(1);
 		}
 	
 	}
@@ -54,7 +57,8 @@ public class Algo {
 		sortcoord sc= new sortcoord(sx,sy,ex,ey) {
 			@Override
 			public int compare(coord a,coord b) {
-				return Double.compare(getdist(this.ssx,this.ssy,a.x,a.y),getdist(this.eex,this.eey,a.x,a.y) );
+				System.out.println("Ok "+Double.compare(getdist(this.ssx,this.ssy,a.x,a.y)+getdist(this.eex,this.eey,a.x,a.y),getdist(this.ssx,this.ssy,b.x,b.y)+getdist(this.eex,this.eey,b.x,b.y)));
+				return Double.compare(getdist(this.ssx,this.ssy,a.x,a.y)+getdist(this.eex,this.eey,a.x,a.y),getdist(this.ssx,this.ssy,b.x,b.y)+getdist(this.eex,this.eey,b.x,b.y) );
 			}
 		};
 		return sc;
@@ -108,6 +112,7 @@ class sortcoord implements Comparator<coord>
 	}
     public int compare(coord a, coord b) 
     { 
+    	System.out.println("no override");
         return 0; // To be overrided
     } 
 } 
