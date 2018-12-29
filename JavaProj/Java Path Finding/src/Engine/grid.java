@@ -17,8 +17,8 @@ import javax.swing.*;
 public class grid extends settings implements KeyListener,MouseListener{
 	public coord getPos(int x,int y) {
 		coord out = new coord(0,0);
-		out.x = Math.floorDiv(x, 10);
-		out.y = Math.floorDiv(y, 10);
+		out.x = Math.floorDiv(x, BLOCK_SIZE);
+		out.y = Math.floorDiv(y, BLOCK_SIZE);
 		return out;
 		
 	}

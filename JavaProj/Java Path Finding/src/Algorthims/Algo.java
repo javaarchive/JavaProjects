@@ -5,8 +5,10 @@ import java.util.Comparator;
 
 import Engine.*;
 public class Algo {
-	public final static int ROWS = 108;
-	public final static int COLS = 192;
+	//public final static int ROWS = 108;
+	//public final static int COLS = 192;
+	public final static int ROWS = 10;
+	public final static int COLS = 10;
 	public static double pythogorean(int a,int b) {
 		return Math.sqrt(a*a + b*b);
 	}
@@ -20,11 +22,12 @@ public class Algo {
 		}
 		return false;
 	}
-	public static int[] bx = {0,1, 0,-1,1,-1, 1,-1};
-	public static int[] by = {1,0,-1, 0,1,-1,-1, 1};
+	public static int[] bx = {0,1, 0,-1};//,1,-1, 1,-1};
+	public static int[] by = {1,0,-1, 0};//,1,-1,-1, 1};
 	
 
 	public static void startAlgorthim() {
+		assert (bx.length == by.length);
 		sortcoord sortc= getSort();
 		int x = sx,y = sy;
 		coord newcoord;
@@ -58,6 +61,12 @@ public class Algo {
 			@Override
 			public int compare(coord a,coord b) {
 				System.out.println("Ok "+Double.compare(getdist(this.ssx,this.ssy,a.x,a.y)+getdist(this.eex,this.eey,a.x,a.y),getdist(this.ssx,this.ssy,b.x,b.y)+getdist(this.eex,this.eey,b.x,b.y)));
+				if((a.x == this.eex) && (a.y == this.eey)) {
+					return -1;
+				}
+				if((b.x == this.eex) && (b.y == this.eey)) {
+					return 1;
+				}
 				return Double.compare(getdist(this.ssx,this.ssy,a.x,a.y)+getdist(this.eex,this.eey,a.x,a.y),getdist(this.ssx,this.ssy,b.x,b.y)+getdist(this.eex,this.eey,b.x,b.y) );
 			}
 		};

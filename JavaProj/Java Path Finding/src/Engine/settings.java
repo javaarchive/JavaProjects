@@ -15,7 +15,8 @@ public class settings extends JPanel{
  */
 public final Color[] colorIds = {Color.RED,Color.BLUE,Color.YELLOW,Color.CYAN,new Color(255, 255, 102)};
 public final Color BORDER_COLOR = Color.BLUE;
-public final int BLOCK_SIZE = 10;
+//public final int BLOCK_SIZE = 10;
+public final int BLOCK_SIZE = 100;
 public final boolean FULL_SCREEN = false;
 public final int WIDTH = 480;
 public final int HEIGHT = 640;
