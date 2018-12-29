@@ -13,9 +13,9 @@ public class settings extends JPanel{
  * colorIds - Color lookup table. You should change this for your own needs. Note that the first color is the default color.
  * 
  */
-public final Color[] colorIds = {Color.RED,Color.BLUE,Color.PINK,Color.CYAN,new Color(255, 255, 102)};
+public final Color[] colorIds = {Color.RED,Color.BLUE,Color.YELLOW,Color.CYAN,new Color(255, 255, 102)};
 public final Color BORDER_COLOR = Color.BLUE;
-public final int BLOCK_SIZE = 35;
+public final int BLOCK_SIZE = 10;
 public final boolean FULL_SCREEN = true;
 public final int WIDTH = 480;
 public final int HEIGHT = 640;

@@ -20,8 +20,8 @@ import javax.swing.UIManager;
 import Engine.grid;
 public class JTetris extends grid implements ActionListener{
 	public ArrayList<block> blocks;
-	public final static int ROWS = 20;
-	public final static int COLS = 15;
+	public final static int ROWS = 108;
+	public final static int COLS = 192;
 	public final static int REFRESH_RATE = 200;
 	public int score=0;
 	public final String GAME_OVER = "Game Over! Press escape to exit!";
