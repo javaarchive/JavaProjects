@@ -3,6 +3,7 @@ package Tools;
 public class Degree {
 	double value;
 	public void mirror() {
+		// 360 - value
 		this.value = 360 - this.value;
 	}
 	public Degree(int value) {
