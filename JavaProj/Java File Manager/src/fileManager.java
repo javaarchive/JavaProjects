@@ -67,7 +67,7 @@ public class fileManager {
 		}
 	}
 	public static void main(String[] args) {
-		String curDir =	"C:\\Users\\fath\\OneDrive\\usaco_resources_handouts";
+		String curDir =	"C:\\Users\\raymo";
 		ArrayList<File> files;
 		sc = new Scanner(System.in);
 		int id;
