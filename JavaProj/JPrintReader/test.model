@@ -1,0 +1,32 @@
+# Lines starting with # are ignored
+# Specify <height> <width> <type(1 for raw, 2 for compiled)> <amount of objects>
+6 6 1 4
+# 1,X - Filled, O,0 for Blank
+# Put letter before model
+C
+111111
+100000
+100000
+100000
+111111
+C
+011111
+110000
+100000
+100000
+110000
+011111
+H
+100001
+100001
+111111
+111111
+100001
+100001
+U
+100001
+100001
+100001
+100001
+100001
+111111
